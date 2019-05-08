@@ -9,10 +9,10 @@ import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
+import lambda_utils.Matcher;
+import lambda_utils.Transformer;
 import tests.Employee.EmployeeFunctions;
 import tests.Employee.EmployeeTestData;
-import utils.Matcher;
-import utils.Transformer;
 
 class HigherOrderTest {
 	

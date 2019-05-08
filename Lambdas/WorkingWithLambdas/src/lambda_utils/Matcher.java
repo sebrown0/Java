@@ -1,4 +1,4 @@
-package utils;
+package lambda_utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

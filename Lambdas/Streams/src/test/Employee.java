@@ -9,13 +9,15 @@ import java.util.function.Predicate;
 public class Employee {
 
 	protected double salary;
-	protected String name;
 	protected int id;
+	protected String name;
+	protected String dept;
 
-	public Employee(int salary, String name, int id) {
+	public Employee(int salary, String name, int id, String dept) {
 		this.salary = salary;
 		this.name = name;
 		this.id = id;
+		this.dept = dept;
 	}
 
 	public double getSalary() {
@@ -30,17 +32,14 @@ public class Employee {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public int getId() {
     return id;
   }
+	
+	public String getDept() {
+	  return dept;
+	}
 
-  public void setId(int id) {
-    this.id = id;
-  }
 
   @Override
 	public String toString() {
@@ -57,9 +56,9 @@ public class Employee {
 		private static Map<Integer, Employee> empMap = new HashMap<>();
 
 		static {
-			empList.add(new Employee(10000, "Bob", 1));
-			empList.add(new Employee(20000, "Linda", 2));
-			empList.add(new Employee(30000, "Jack", 3));
+			empList.add(new Employee(10000, "Bob", 1,"HR"));
+			empList.add(new Employee(20000, "Linda", 2,"HR"));
+			empList.add(new Employee(30000, "Jack", 3, "Accounts"));
 			
 			empList.stream().forEach(e -> empMap.put(e.getId(), e));
 		}

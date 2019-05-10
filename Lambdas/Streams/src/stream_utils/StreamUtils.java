@@ -1,12 +1,16 @@
 package stream_utils;
 
+import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.DoubleUnaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
 import test.Employee;
+import test.TestData;
 import test.Employee.EmployeeTestData;
 
 public class StreamUtils {
@@ -19,6 +23,10 @@ public class StreamUtils {
   @FunctionalInterface
   public interface PredicateFunction {
    <T> boolean applyFunc(Predicate<T> p);
+  }
+  
+  public static <T> void prntList(List<T> l) {
+    l.stream().forEach(e -> System.out.println(e));
   }
   
   public static <T> boolean testFunc(T arg, Predicate<T> p){
@@ -69,4 +77,12 @@ public class StreamUtils {
       
   public static Function<Double, Predicate<Employee>> empsWithSalaryHigherThanArg = 
       arg -> (e -> e.getSalary() > arg); 
+      
+  public static double operateOnDoublesSerialy(double [] d, DoubleUnaryOperator op) {
+    return DoubleStream.of(TestData.getRndNums()).map(op).sum();
+  }
+  
+  public static double operateOnDoublesInParallel(double [] d, DoubleUnaryOperator op) {
+    return DoubleStream.of(TestData.getRndNums()).parallel().map(op).sum();
+  }
 }

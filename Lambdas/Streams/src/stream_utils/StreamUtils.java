@@ -10,8 +10,8 @@ import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
 import test.Employee;
-import test.TestData;
 import test.Employee.EmployeeTestData;
+import test.TestData;
 
 public class StreamUtils {
 
@@ -84,5 +84,25 @@ public class StreamUtils {
   
   public static double operateOnDoublesInParallel(double [] d, DoubleUnaryOperator op) {
     return DoubleStream.of(TestData.getRndNums()).parallel().map(op).sum();
+  }
+  
+  public static List<Double> generateListOfDoubles(int size){
+    return Stream.generate(Math::random).limit(size).collect(Collectors.toList());
+  }
+  
+  public static double averageOfList(List<Double> list) {
+    return (list.stream().mapToDouble(n -> n.doubleValue()).average().orElse(Double.NaN));
+  }
+  
+  public static <T> List<T> ignorePartOfList(long ignoreUpTo, List<T> list){
+    return list.stream().skip(ignoreUpTo).collect(Collectors.toList());
+  }
+  
+  public static List<Double> ignoreNumsLessThan(Double arg, List<Double> list){
+    return list.stream().filter(n -> n >= 0.5).collect(Collectors.toList());
+  }
+  
+  public static List<Double> doubleNumsInList(List<Double> list){
+    return list.stream().map(n -> n * 2).collect(Collectors.toList());
   }
 }

@@ -1,6 +1,7 @@
 .metadata
 bin/
 tmp/
+!word-list.txt
 *.txt
 *.jar
 *.classpath

@@ -1,4 +1,4 @@
-package timer;
+package main;
 
 public interface Operation {
 	void runOperation();

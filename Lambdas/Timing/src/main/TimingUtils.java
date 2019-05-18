@@ -1,4 +1,4 @@
-package timer;
+package main;
 
 public class TimingUtils {
 	private static final double ONE_BILLION = 1_000_000_000;

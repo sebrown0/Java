@@ -1,4 +1,4 @@
-package file_utils;
+package main;
 
 import java.io.IOException;
 import java.nio.file.Files;

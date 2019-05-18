@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-import timer.TimingUtils;
+import main.TimingUtils;
 
 class TimingUtilsTest {
 

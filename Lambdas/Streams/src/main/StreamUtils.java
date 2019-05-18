@@ -1,4 +1,4 @@
-package stream_utils;
+package main;
 
 import java.util.List;
 import java.util.function.Consumer;

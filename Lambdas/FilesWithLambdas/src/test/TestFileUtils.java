@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-import file_utils.FileUtils;
-import file_utils.StreamAnalyser;
-import file_utils.StreamProcessor;
+import main.FileUtils;
+import main.StreamAnalyser;
+import main.StreamProcessor;
 
 /**
  * 

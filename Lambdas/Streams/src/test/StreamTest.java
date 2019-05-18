@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-import stream_utils.StreamUtils;
+import main.StreamUtils;
 import test.Employee.EmployeeTestData;
 import test.TestData.PrimeNumber;
 import timer.Operation;

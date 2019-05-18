@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import lambda_utils.Matcher;
-import lambda_utils.MethodReferences;
-import lambda_utils.Sorting;
-import lambda_utils.Transformer;
+import main.Matcher;
+import main.MethodReferences;
+import main.Sorting;
+import main.Transformer;
 import tests.Employee.EmployeeTestData;
 
 class LambdaTests {
